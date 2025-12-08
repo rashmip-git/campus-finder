@@ -1,0 +1,193 @@
+/* MAIN SECTION */
+.loginsignup2 {
+    width:100%;
+    height: 100vh;
+    padding-top: 80px;
+    background: #F3E9DD;  /* Latte Cream */
+}
+
+/* WHITE LOGIN BOX */
+.container {
+    width:500px;
+    height:600px;
+    margin: auto;
+    padding: 40px 60px;
+    background: #FFF9F4; /* Light Cream */
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 15px rgba(75, 46, 43, 0.15);
+}
+
+.container h1 {
+    margin: 20px 0px;
+    color: #4B2E2B;  /* Dark Coffee */
+}
+
+/* INPUT FIELDS */
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-top: 30px;
+}
+
+.fields input {
+    height:50px;
+    width:100%;
+    border:1px solid #C89F7A;  /* Caramel border */
+    border-radius: 20px;
+    padding-left: 20px;
+    outline: none;
+    background: #FFF9F4;
+    color: #4B2E2B;
+}
+
+/* LOGIN BUTTON */
+.continue {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    background: #7A4F3D; /* Mocha */
+    color: white;
+    font-weight:bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.continue:hover {
+    background: #C89F7A;  /* Caramel */
+}
+
+/* SIGNUP TEXT */
+.abc {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+    color: #4B2E2B;
+}
+
+.abc span {
+    color: #7A4F3D;  /* Mocha */
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* TERMS */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #4B2E2B;
+}
+
+.terms span {
+    color: #7A4F3D;
+    font-weight: 500;
+}
+
+/* =======================
+   2024px and below
+======================= */
+@media (max-width:2024px){
+  .container{
+    margin-top: 50px;
+  }
+}
+
+/* =======================
+      TABLETS
+======================= */
+@media (max-width: 1024px) {
+
+    .container {
+        max-width: 85%;
+        margin-top: 150px;
+        padding: 30px;
+    }
+
+    .fields input {
+        height: 45px;
+        width:95%;
+    }
+}
+
+/* =======================
+      PHONES
+======================= */
+@media (max-width: 768px) {
+
+    .loginsignup2 {
+        padding-top: 40px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 90%;
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .fields input {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .continue {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .abc {
+        font-size: 16px;
+    }
+}
+
+/* =======================
+      SMALL PHONES
+======================= */
+@media (max-width: 480px) {
+
+    .loginsignup2 {
+        padding-top: 20px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+        border-radius: 25px;
+        margin-top: 100px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .fields input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .continue {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .terms {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 12px;
+    }
+}

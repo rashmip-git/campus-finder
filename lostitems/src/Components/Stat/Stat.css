@@ -1,0 +1,53 @@
+.statbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  gap: 100px;
+  background: white; /* matches page bg */
+  padding: 40px 0;
+}
+
+.box1, .box2, .box3 {
+  background: #f5e9dc; /* light brown card */
+  width: 300px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, border 0.3s ease;
+  color: #5a3825; /* deep brown text */
+  box-shadow: 0 4px 10px rgba(90, 56, 37, 0.1);
+}
+
+.imgdiv {
+  background: #e2c8aa; /* soft tan */
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(139, 94, 60, 0.15);
+}
+
+.box1:hover, .box2:hover, .box3:hover {
+  border: 1px solid #8b5e3c;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 94, 60, 0.25);
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .statbox {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .box1, .box2, .box3 {
+    width: 85%;
+  }
+}
+

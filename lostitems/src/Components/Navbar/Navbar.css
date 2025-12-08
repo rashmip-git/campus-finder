@@ -1,0 +1,160 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+ 
+  background: white;
+  box-shadow: 0 4px 15px rgba(90, 56, 37, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px;
+  
+}
+
+.nav-logo p {
+  font-size: 25px;
+  font-weight: 700;
+  color: #5a3825; /* dark brown */
+  letter-spacing: 1px;
+}
+
+/* Menu styling */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #5a3825;
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #8b5e3c;
+  transform: scale(1.05);
+}
+
+.nav-menu hr {
+  width: 80%;
+  height: 3px;
+  border-radius: 50px;
+  background: #8b5e3c;
+  border: none;
+  margin: 4px auto 0;
+}
+
+/* Login button */
+.nav-loginbox {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.login {
+  height: 35px;
+  width: 90px;
+  background: linear-gradient(180deg, #5a3825, #8b5e3c);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 3px 10px rgba(139, 94, 60, 0.3);
+}
+
+.login:hover {
+  background: #9c6f4b;
+  transform: scale(1.08);
+}
+
+/* HAMBURGER  */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide normal desktop menu initially */
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(90, 56, 37, 0.15);
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  /* When open */
+  .nav-menu.open {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Hide desktop signup button */
+  .nav-loginbox {
+    display: none;
+  }
+
+  /* Show signup button in menu */
+  .mobile-login {
+    display: block;
+  }
+
+  .nav-logo p {
+    font-size: 18px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+    opacity: 1 !important;
+    height: auto !important;
+    visibility: visible !important;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+  .mobile-login {
+    display: none;
+  }
+}

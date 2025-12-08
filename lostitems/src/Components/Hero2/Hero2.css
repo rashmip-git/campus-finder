@@ -1,0 +1,353 @@
+.herobox2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading2 h1{
+    font-size: 60px;
+    color: #4B2E2B; 
+    margin-top: 150px;
+    line-height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading2 h1 span {
+  display: inline-block;
+  background: linear-gradient(180deg, #7A4F3D, #C89F7A); /* Mocha → Caramel */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heading22 {
+  text-align: center;
+}
+
+.texts2 p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 2;
+    color: #4B2E2B; /* Coffee */
+}
+
+.texts2{
+    width:600px;
+    text-align: center;
+    font-style: italic;
+    margin: auto;
+    color: #4B2E2B;
+}
+
+.twobuttons{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    margin-top: 70px;
+}
+
+.btn1{
+    height:40px;
+    width:200px;
+    background: #7A4F3D; /* Mocha */
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn1:hover{
+    background-color: #C89F7A; /* Caramel */
+}
+
+.btn2{
+    height:40px;
+    width:200px;
+    background: #7A4F3D; /* Mocha */
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn2:hover{
+    background-color: #E6C8A5; /* Light Caramel */
+}
+
+.heroboxdown{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin-top: 100px;
+    margin-left: 170px;
+    background: #F3E9DD; /* Latte Cream */
+    border-radius: 20px;
+}
+
+.divfortop{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.divfortop p{
+    color: #4B2E2B;
+}
+
+.divforbottom{
+    display: flex;
+    margin-top: 100px;
+    gap:40px;
+}
+
+.divforimg{
+    background: #C89F7A; /* Caramel */
+    width:80px;
+    border-radius: 50px;
+}
+
+.divbottom1 p{
+    font-size: 18px;
+    color: #4B2E2B; /* Coffee */
+}
+
+.divbottom1{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+}
+
+.us{
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #4B2E2B;
+}
+
+.meher{
+    display: flex;
+    justify-content: center;
+    gap:150px;
+    margin-top: 50px;
+}
+
+.me{
+    background: #F3E9DD; /* Latte Cream */
+    border-radius: 10px;
+    width:300px;
+    padding-bottom: 20px;
+}
+
+.me p{
+    font-size: 18px;
+    color: #4B2E2B;
+}
+
+.meimg{
+    border-radius: 50px;
+    height:70px;
+    width:70px;
+    background:  #C89F7A; /* Caramel */
+    margin-top: 20px;
+    margin-left: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.her{
+    background: #F3E9DD; /* Latte Cream */
+    border-radius: 10px;
+    width:300px;
+    padding-bottom: 20px;
+}
+
+.her p{
+    font-size: 18px;
+    color: #4B2E2B;
+}
+.toptexts p{
+    color: #4B2E2B;
+}
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+
+  .heading2 h1 {
+    font-size: 45px;
+    line-height: 40px;
+    margin-top: 100px;
+  }
+
+  .texts2 {
+    width: 90%;
+  }
+
+  .twobuttons {
+    gap: 30px;
+  }
+
+  .heroboxdown {
+    width: 90%;
+    margin-left: 30px;
+  }
+
+  .meher {
+    gap: 80px;
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+
+  .hero2box{
+    margin-top: 140px;
+  }
+
+  .heading2 h1 {
+   text-align: center;
+  }
+
+  .texts2 {
+    width: 90%;
+  }
+
+  .twobuttons {
+    flex-direction:row;
+    gap: 20px;
+  }
+
+.btn1,.btn2{
+    width:70%;
+}
+
+  .heroboxdown {
+    width: 90%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .divforbottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .meher {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .me, .her {
+    width: 90%;
+  }
+
+  .meimg {
+    margin-left: calc(50% - 35px); /* center image */
+  }
+}
+
+/* Extra Small Screens (Small Phones) */
+@media (max-width: 480px) {
+
+  .heading2 h1 {
+    font-size: 32px;
+    line-height: 34px;
+    margin-top: 60px;
+  }
+
+  .texts2 p {
+    font-size: 16px;
+  }
+
+  .btn1, .btn2 {
+    height: 40px;
+    width:100%;
+  }
+
+  .heroboxdown {
+    margin-top: 80px;
+
+  }
+
+  .divfortop {
+    padding: 10px;
+  }
+  .divfortop p{
+    font-size: 18px;
+  }
+
+  .meimg {
+    height: 60px;
+    width: 60px;
+  }
+
+  .me p, .her p {
+    font-size: 16px;
+  }
+ 
+  .meher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .meher {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .me, .her {
+    width: 280px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .meher {
+    display: flex;
+    flex-direction: row;  /* keep side-by-side */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .me, .her {
+    width: 45%;  /* fits two items per row */
+  }
+
+  .meimg {
+    margin-left: calc(50% - 35px);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .meher {
+    gap: 10px;
+  }
+  
+
+  .me, .her {
+    width: 48%; /* still 2 items in row */
+  }
+
+  .meimg {
+    height: 60px;
+    width: 60px;
+  }
+
+  .me p, .her p {
+    font-size: 15px;
+  }
+}
+
+

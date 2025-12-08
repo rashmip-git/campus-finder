@@ -1,0 +1,14 @@
+
+
+export const items = [
+  { id: '1', name: 'Black iPhone 13 Pro', category: 'Phones', location: 'Library', image: 'https://goldenshield.in/cdn/shop/files/BareNakedforiPhone13ProandiPhone13ProMax-ThinnestCaseforiPhone13ProandiPhone13ProMax-PitchBlack-2_2000x_2a209eaa-1114-4664-8fc6-18aba247eb91.jpg?v=1697537433&width=2048', contact: '+91 9876543201', email: 'owner1@college.edu', date: '2025-10-26' },
+  { id: '2', name: 'Samsung Galaxy S21', category: 'Phones', location: 'Canteen', image: 'https://igalaxy.nl/cdn/shop/files/samsung-galaxy-s21-ultra_600x600_BGresize_16777215-tj.png?v=1718277326', contact: '+91 9876543202', email: 'owner2@college.edu', date: '2025-10-25' },
+  { id: '3', name: 'Blue Wallet Case', category: 'Bags', location: 'Sports Complex', image: 'https://5.imimg.com/data5/SELLER/Default/2023/9/342133080/CG/GI/DD/180062611/men-blue-leather-wallet.jpeg', contact: '+91 9876543203', email: 'owner3@college.edu', date: '2025-10-24' },
+  { id: '4', name: 'Silver MacBook Pro', category: 'Laptops', location: 'Lab 101', image: 'https://5.imimg.com/data5/SELLER/Default/2021/8/QF/XH/BH/128584534/apple-silver-256gb-macbook-pro.png', contact: '+91 9876543204', email: 'owner4@college.edu', date: '2025-10-23' },
+  { id: '5', name: 'Red Backpack', category: 'Bags', location: 'Auditorium', image: 'hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmEke10PfOQ3obajabYrUFIHtBevjiqw6Dmg&s', contact: '+91 9876543205', email: 'owner5@college.edu', date: '2025-10-22' },
+  { id: '6', name: 'White AirPods', category: 'Electronics', location: 'Gym', image: 'https://www.lapcare.com/cdn/shop/files/1_2.jpg?v=1757325866&width=3500', contact: '+91 9876543206', email: 'owner6@college.edu', date: '2025-10-21' },
+  { id: '7', name: 'Grey Calculator', category: 'Electronics', location: 'Lab 102', image: 'https://atlas-content-cdn.pixelsquid.com/stock-images/grey-calculator-generic-RBxnz76-600.jpg', contact: '+91 9876543207', email: 'owner7@college.edu', date: '2025-10-20' },
+  { id: '8', name: 'Black Notebook', category: 'Stationery', location: 'Library', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOs3iEeui712dlKDqdjcTJ3uTGNsz3NvdG0g&s', contact: '+91 9876543208', email: 'owner8@college.edu', date: '2025-10-19' },
+  { id: '9', name: 'Blue Water Bottle', category: 'Accessories', location: 'Sports Complex', image: 'https://thegiftingmarketplace.in/cdn/shop/files/TGMGC-47-Blue-Temperature-Bottle-Laser-Engraved-_1_a20e8ba7-937f-47d9-960a-f46b16353c7c.png?v=1743675184', contact: '+91 9876543209', email: 'owner9@college.edu', date: '2025-10-18' },
+  { id: '10', name: 'Black Charger', category: 'Electronics', location: 'Cafeteria', image: 'https://tiimg.tistatic.com/fp/1/007/726/black-color-original-portable-wall-mobile-charger-with-type-c-fast-charging-cable-051.jpg', contact: '+91 9876543210', email: 'owner10@college.edu', date: '2025-10-17' },
+]

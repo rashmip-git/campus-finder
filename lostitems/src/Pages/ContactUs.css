@@ -1,0 +1,279 @@
+.contactbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactbox h1{
+    color: #4B2E2B; /* Dark Coffee */
+    font-size: 40px;
+    padding-top: 100px;
+}
+
+.contactbox2{
+    display: flex;
+    gap:100px;
+    margin-top: 50px;
+}
+
+p{
+    color: #4B2E2B; /* Coffee */
+}
+
+.cboxleft{
+    display: flex;
+    flex-direction: column;
+    background: #F3E9DD; /* Latte Cream */
+    margin-left: 50px;
+    border-radius: 30px;
+    width:60%;
+    height:1000px;
+    padding-left:20px;
+    border: 1px solid #C89F7A; /* Caramel border */
+}
+
+.cboxleft p{
+    line-height: 30px;
+}
+
+.continfo{
+    display: flex;
+    gap:60px;
+}
+
+.sub{
+    height:30px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    width:50%;
+    box-shadow: 0px 0px 2px #7A4F3D; /* Mocha shadow */
+    background: #FFF9F4; /* Light cream */
+    color: #4B2E2B;
+}
+
+.sendmsg{
+    margin-top: 50px;
+    height:40px;
+    width:90%;
+    background: #7A4F3D; /* Mocha */
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+.sendmsg:hover{
+    background: #C89F7A; /* Caramel */
+}
+
+.tt{
+    height:100px;
+    width:60%;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    background: #FFF9F4;
+    color: #4B2E2B;
+    box-shadow: 0px 0px 2px #7A4F3D;
+}
+
+.continfo input{
+    height:30px;
+    width:300px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px #7A4F3D;
+    border-radius: 10px;
+    padding-left: 10px;
+    background: #FFF9F4;
+    color: #4B2E2B;
+}
+
+.cboxrightup,
+.cboxrightdown{
+    background: #F3E9DD; /* Latte */
+    margin-right: 20px;
+    padding-left: 20px;
+    border-radius: 30px;
+    border: 1px solid #C89F7A; 
+}
+
+.c1, .c2, .c3, .c4{
+    display: flex;
+    align-items: center;
+    gap:70px;
+}
+
+.cimg1, .cimg2, .cimg3, .cimg4{
+    background: #C89F7A; /* Caramel */
+    height:70px;
+    width:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.cboxright{
+   display: flex;
+   flex-direction: column;
+   gap:50px;
+   margin-bottom: 50px;
+}
+
+/* ===============================
+   Tablets and Medium Screens
+================================*/
+@media (max-width: 1024px) {
+
+  .contactbox2 {
+    gap: 40px;
+  }
+
+  .cboxleft {
+    width: 70%;
+    height: auto;
+    margin-left: 20px;
+    padding: 18px;
+  }
+
+  .continfo {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .continfo input {
+    width: 100%;
+  }
+
+  .tt {
+    width: 80%;
+  }
+
+  .sendmsg {
+    width: 80%;
+  }
+
+  .cboxright {
+    gap: 30px;
+  }
+
+  .cimg1, .cimg2, .cimg3, .cimg4 {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* ===============================
+        Mobile Screens
+================================*/
+@media (max-width: 768px) {
+
+  .contactbox2 {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .contactbox h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .cboxleft {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .continfo {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .continfo input {
+    width: 100%;
+  }
+
+  .cboxright {
+    width: 90%;
+  }
+
+  .c1, .c2, .c3, .c4 {
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  .cimg1, .cimg2, .cimg3, .cimg4 {
+    height: 55px;
+    width: 55px;
+  }
+
+  .sendmsg {
+    width: 100%;
+  }
+
+  .tt {
+    width: 100%;
+  }
+}
+
+/* ===============================
+     Small Mobile Screens
+================================*/
+@media (max-width: 480px) {
+
+  .contactbox {
+    margin-top: 120px;
+  }
+
+  .contactbox h1 {
+    font-size: 35px;
+  }
+
+  .cboxleft {
+    padding: 15px;
+  }
+
+  .continfo input {
+    height: 35px;
+    font-size: 14px;
+    width: 98%;
+  }
+
+  .sub {
+    width: 98%;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .sendmsg {
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .c1, .c2, .c3, .c4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cimg1, .cimg2, .cimg3, .cimg4 {
+    height: 50px;
+    width: 50px;
+  }
+
+  .cboxright {
+    text-align: center;
+    width: 100%;
+  }
+
+  .cboxrightup,
+  .cboxrightdown {
+    padding: 15px;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+}
