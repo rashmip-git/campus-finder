@@ -3,26 +3,9 @@ const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const authCtrl = require('../controllers/authController');
 const { protect, restrictTo } = require('../middleware/auth');
-const User = require('../models/User')  // <-- Add this
+const User = require('../models/User')  
 
-/*router.post(
-  '/signup',
-  [
-    check('username').notEmpty().withMessage('Username required'),
-    check('email').isEmail().withMessage('Valid email required'),
-    check('password').isLength({ min: 8 }).withMessage('Min 8 characters required'),
-    check('role').optional().isIn(['admin', 'user'])
-  ],
-  (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  },
-    authCtrl.signup
-  
-);*/
+
 router.post(
   '/signup',
   [

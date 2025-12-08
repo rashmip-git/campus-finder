@@ -12,10 +12,6 @@ import About from './Pages/About';
 import LoginSignup from './Pages/LoginSignup';
 import Footer from './Components/Footer/Footer';
 
-
-
-
-
 function App() {
 
   return (
@@ -24,7 +20,6 @@ function App() {
     <ItemContextProvider>
       <BrowserRouter>
     <Navbar/>
-   
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/category' element={<Category/>}/>
@@ -34,22 +29,10 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/loginsignup' element={<LoginSignup/>}/>
       </Routes>
-    
       <Footer/>
-      
-          
-
-  
     </BrowserRouter>
     </ItemContextProvider>
     </AuthContextProvider>
-      
-   
-    
-    
-      
-    
-  
       </>
     
   )

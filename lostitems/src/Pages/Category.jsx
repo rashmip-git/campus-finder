@@ -10,13 +10,7 @@ const Category = () => {
   const [selected, setSelected] = useState(urlCategory || null);
   const { itemcon } = useContext(ItemContext);
 
-  /*const categories = [...new Set(itemcon.map((prod) => prod.category))].map(
-    (cat) => {
-      const sample = itemcon.find((i) => i.category === cat);
-      return { category: cat, image: sample.image || "/default.jpg" };
-    }
-  );*/
-
+  
   // ✅ Parent container controls stagger
   const containerVariants = {
     hidden: { opacity: 0 },
