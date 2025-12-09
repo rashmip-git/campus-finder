@@ -14,7 +14,8 @@ const Stat = () => {
 
   // Fetch active users count
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/count")
+    //fetch("http://localhost:5000/api/auth/count")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/count`)
       .then(res => res.json())
       .then(data => setUserCount(data.total || 0))
       .catch(err => console.log("User count error:", err));
@@ -22,7 +23,8 @@ const Stat = () => {
 
   // Fetch resolved items count
   useEffect(() => {
-    fetch("http://localhost:5000/api/items/stats/resolved")
+    //fetch("http://localhost:5000/api/items/stats/resolved")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/items/stats/resolved`)
       .then(res => res.json())
       .then(data => setResolvedCount(data.totalResolved || 0))
       .catch(err => console.log("Resolved count error:", err));

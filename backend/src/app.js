@@ -15,11 +15,29 @@ const errorHandler = require('./middleware/errorHandler');
 const app = express();
 
 // -------- GLOBAL MIDDLEWARES --------
-app.use(cors({
+/*app.use(cors({
   origin:[ "http://localhost:5173",
   process.env.FRONTEND_URL,
   ], // or your frontend URL
   credentials: true
+}));*/
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL   // Render will use this for Vercel domain
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.log("❌ Blocked by CORS:", origin);
+      callback(new Error("CORS blocked: " + origin));
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
@@ -52,7 +70,7 @@ async function startServer() {
       if (err) {
         console.log("❌ Error while starting server:", err);
       } else {
-        console.log(`✅ Server running at http://localhost:${PORT}`);
+        console.log(`✅ Server running on port ${PORT}`);
       }
     });
 
