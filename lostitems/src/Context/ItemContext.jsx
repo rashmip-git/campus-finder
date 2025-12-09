@@ -3,7 +3,8 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 
 export const ItemContext = createContext();
-const API_BASE = "http://localhost:5000/api";
+//const API_BASE = "http://localhost:5000/api";
+const API_BASE = `${import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"}/api`;
 
 export const ItemContextProvider = ({ children }) => {
   const { token } = useContext(AuthContext);
