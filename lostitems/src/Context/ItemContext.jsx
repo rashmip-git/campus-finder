@@ -5,7 +5,8 @@ import { AuthContext } from "./AuthContext";
 export const ItemContext = createContext();
 //const API_BASE = "http://localhost:5000/api";
 //const API_BASE = `${import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"}/api`;
-const API_BASE = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
+//const API_BASE = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
+const API_BASE = `${import.meta.env.VITE_BACKEND_URL}/api`;
 
 
 export const ItemContextProvider = ({ children }) => {
