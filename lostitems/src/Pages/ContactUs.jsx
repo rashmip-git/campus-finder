@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Contactus.css'
+import './ContactUs.css'
 import emailjs from "emailjs-com";
 import time from '../assets/time.png'
 import email from '../assets/email.png'
