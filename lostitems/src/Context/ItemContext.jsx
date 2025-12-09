@@ -39,13 +39,26 @@ export const ItemContextProvider = ({ children }) => {
     }
 
     try {
+      const formData = new FormData();
+      formData.append("name", newItem.name);
+      formData.append("category", newItem.category);
+      formData.append("location", newItem.location);
+      formData.append("contact", newItem.contact);
+      formData.append("email", newItem.email);
+      formData.append("date", newItem.date);
+      formData.append("status", newItem.status);
+
+      // Attach image file if selected
+      if (newItem.imageFile) {
+        formData.append("image", newItem.imageFile);
+      }
       const res = await fetch(`${API_BASE}/items`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          //"Content-Type": "application/json",
           Authorization: `Bearer ${token}`
         },
-        body: JSON.stringify(newItem)
+        body: formData,
       });
 
       const data = await res.json();

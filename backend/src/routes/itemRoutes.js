@@ -3,6 +3,8 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const itemCtrl = require('../controllers/item'); 
 const Item = require('../models/Item');
+const upload = require("../config/multer");
+
 
 
 // ---------- PUBLIC ----------
@@ -19,7 +21,7 @@ router.get('/stats/resolved', async (req, res) => {
 
 router.get('/:id',  itemCtrl.getItemsById);
 
-router.post('/', auth.protect, auth.restrictTo('admin','user'), itemCtrl.createItem);
+router.post('/', auth.protect, auth.restrictTo('admin','user'),   upload.single("image"), itemCtrl.createItem);
 
 router.patch('/:id/resolve', auth.protect, itemCtrl.resolveItem);
 
