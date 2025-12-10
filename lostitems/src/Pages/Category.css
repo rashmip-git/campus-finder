@@ -110,10 +110,22 @@
   
 }
 .category-box{
-   height:270px;
+   height:240px;
   width:130px;
   margin-left: 0px;
 }
+.category-img {
+    height: 120px;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .view-btn {
+    padding: 6px 14px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
 }
 
 
