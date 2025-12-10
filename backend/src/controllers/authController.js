@@ -11,7 +11,6 @@ function signToken(user) {
   );
 }
 
-
 // -------------------- SIGNUP --------------------
 exports.signup = async (req, res, next) => {
   try {

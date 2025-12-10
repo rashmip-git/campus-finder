@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"; // ADD THIS
 import "./LoginSignup.css";
 import { AuthContext } from "../Context/AuthContext"; // ADD THIS
 
-//const API_BASE = "http://localhost:5000/api/auth";
 const API_BASE = `${import.meta.env.VITE_BACKEND_URL}/api/auth`;
 
 
@@ -16,7 +15,7 @@ const LoginSignup = () => {
   });
   const [loading, setLoading] = useState(false);
   
-  // ADD THESE 2 LINES
+  
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 

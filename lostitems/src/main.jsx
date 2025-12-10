@@ -7,11 +7,11 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
    
-    //<ItemContextProvider>
+
 
         <StrictMode>
     <App />
   </StrictMode>
-    //</ItemContextProvider>
+   
  
 );

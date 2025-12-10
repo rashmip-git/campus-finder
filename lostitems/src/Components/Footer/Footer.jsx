@@ -6,7 +6,7 @@ const Footer = () => {
     <>
 
     <div className="footerbox">
-        <p>© 2024 Lost Items Finder. Made with ❤️ for college students</p>
+        <p>© 2025 Lost Items Finder. Made with ❤️ for college students</p>
     </div>
     </>
   )
