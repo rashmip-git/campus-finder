@@ -110,7 +110,7 @@ const LoginSignup = () => {
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="min 8 char needed"
               value={form.password}
               onChange={handleChange}
               required
