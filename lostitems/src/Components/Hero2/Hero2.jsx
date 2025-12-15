@@ -84,7 +84,7 @@ const Hero2 = () => {
                 </div>
                 {/*<h2>Pai</h2>*/}
                 {/*<p>Backend</p>*/}
-                <p>Information Science student passionate about backend development and scalable systems.</p>
+                <p>Information Science student passionate about backend development</p>
             </div>
 
         </div>
