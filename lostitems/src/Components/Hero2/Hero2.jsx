@@ -74,8 +74,8 @@ const Hero2 = () => {
                     <h1>RP</h1>
                 </div>
                 {/*<h2>Prabhu</h2>*/}
-                <p>FRONTEND</p>
-                {/*<p>Computer Science student who decided to build something helpful</p>*/}
+                {/*<p>COMPUTER SCIENCE</p>*/}
+                <p>Computer Science student who decided to build something helpful</p>
             </div>
 
             <div className="her">
@@ -83,8 +83,8 @@ const Hero2 = () => {
                     <h1>AP</h1>
                 </div>
                 {/*<h2>Pai</h2>*/}
-                <p>Backend</p>
-                {/*<p>Information Science student passionate about backend development and scalable systems.</p>*/}
+                {/*<p>Backend</p>*/}
+                <p>Information Science student passionate about backend development and scalable systems.</p>
             </div>
 
         </div>
