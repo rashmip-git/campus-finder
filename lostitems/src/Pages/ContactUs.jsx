@@ -120,7 +120,7 @@ const ContactUs = () => {
                   <h4>Frequently asked question</h4>
                   <p><b>How do I report a found item?</b></p>
                   <p>Simply click "Add Product" and select "I found something" to post details about the item.</p>
-                  <p><b>Is this servoce free?</b></p>
+                  <p><b>Is this service free?</b></p>
                   <p>Yes! This platform is completely free for all students and campus community members.</p>
                   <p><b>How do i safely meet someone?</b></p>
                   <p>Always meet in public campus locations during daylight hours. Consider bringing a friend.</p>

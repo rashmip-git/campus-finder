@@ -73,18 +73,18 @@ const Hero2 = () => {
                 <div className="meimg">
                     <h1>RP</h1>
                 </div>
-                <h2>Prabhu</h2>
+                {/*<h2>Prabhu</h2>*/}
                 <p>FRONTEND</p>
-                <p>Computer Science student who decided to build something helpful</p>
+                {/*<p>Computer Science student who decided to build something helpful</p>*/}
             </div>
 
             <div className="her">
                 <div className="meimg">
                     <h1>AP</h1>
                 </div>
-                <h2>Pai</h2>
+                {/*<h2>Pai</h2>*/}
                 <p>Backend</p>
-                <p>Information Science student passionate about backend development and scalable systems.</p>
+                {/*<p>Information Science student passionate about backend development and scalable systems.</p>*/}
             </div>
 
         </div>
