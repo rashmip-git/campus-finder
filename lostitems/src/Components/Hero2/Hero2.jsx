@@ -31,7 +31,7 @@ const Hero2 = () => {
 
     <div className="heroboxdown">
         <div className="divfortop">
-            <h1>our mission</h1>
+            <h1>OUR MISSION</h1>
             <p>To create a supportive campus community
                  where students help each other 
                 recover lost belongings quickly and safely.</p>
