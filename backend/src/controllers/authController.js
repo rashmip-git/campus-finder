@@ -72,7 +72,6 @@ exports.login = async (req, res, next) => {
         email: user.email
       }
     });
-
   } catch (err) {
     next(err);
   }
