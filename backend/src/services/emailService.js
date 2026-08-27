@@ -57,7 +57,7 @@ async function sendMatchVerificationEmail({
 
                 <p>
                     <a
-                        href="${verificationUrl}/yes"
+                        href="${verificationUrl}"
                         style="
                             display:inline-block;
                             padding:12px 20px;
