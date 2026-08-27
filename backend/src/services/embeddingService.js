@@ -19,9 +19,10 @@ async function loadTextModel() {
         tokenizer = await AutoTokenizer.from_pretrained(MODEL_NAME);
 
         console.log("Loading CLIP text model...");
-        textModel = await CLIPTextModelWithProjection.from_pretrained(
-            MODEL_NAME
-        );
+textModel = await CLIPTextModelWithProjection.from_pretrained(
+    MODEL_NAME,
+    { dtype: "q8" }
+);
 
         console.log("CLIP text model loaded.");
     }
@@ -35,9 +36,10 @@ async function loadVisionModel() {
         processor = await AutoProcessor.from_pretrained(MODEL_NAME);
 
         console.log("Loading CLIP vision model...");
-        visionModel = await CLIPVisionModelWithProjection.from_pretrained(
-            MODEL_NAME
-        );
+       visionModel = await CLIPVisionModelWithProjection.from_pretrained(
+    MODEL_NAME,
+    { dtype: "q8" }
+);
 
         console.log("CLIP vision model loaded.");
     }
