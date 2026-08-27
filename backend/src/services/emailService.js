@@ -1,12 +1,6 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD
-    }
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendMatchVerificationEmail({
     to,
@@ -15,126 +9,86 @@ async function sendMatchVerificationEmail({
     verificationUrl
 }) {
     const mailOptions = {
-        from: `"FoundIt" <${process.env.EMAIL_USER}>`,
-        to,
+        from: "FoundIt <onboarding@resend.dev>",
+        to: [to],
 
         subject: "Possible Match Found - FoundIt",
 
         html: `
-            <div style="
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                max-width: 600px;
-                margin: auto;
-            ">
+            <div style="font-family: Arial, sans-serif; line-height: 1.6;">
 
-                <h2>🔎 Possible Match Found!</h2>
+                <h2>🔎 Possible Match Found</h2>
 
                 <p>
-                    We found a possible match for your lost item
-                    on <strong>FoundIt</strong>.
+                    A newly reported item may match an item you reported
+                    on FoundIt.
                 </p>
 
-                <h3>Your Lost Item</h3>
+                <h3>Your item</h3>
 
                 <p>
-                    <strong>Name:</strong> ${newItem.name}
+                    <strong>Name:</strong>
+                    ${candidateItem.name}
                 </p>
 
                 <p>
-                    <strong>Category:</strong> ${newItem.category}
-                </p>
-
-                <p>
-                    <strong>Location:</strong> ${newItem.location}
-                </p>
-
-                <p>
-                    <strong>Date:</strong>
-                    ${new Date(newItem.date).toLocaleDateString("en-IN")}
+                    <strong>Status:</strong>
+                    ${candidateItem.status}
                 </p>
 
                 <hr>
 
-                <h3>🎯 Possible Found Item</h3>
+                <h3>Possible matching item</h3>
 
                 <p>
-                    <strong>Name:</strong> ${candidateItem.name}
+                    <strong>Name:</strong>
+                    ${newItem.name}
                 </p>
 
                 <p>
-                    <strong>Category:</strong> ${candidateItem.category}
+                    <strong>Status:</strong>
+                    ${newItem.status}
                 </p>
 
                 <p>
-                    <strong>Location:</strong> ${candidateItem.location}
-                </p>
-
-                <p>
-                    <strong>Date:</strong>
-                    ${new Date(candidateItem.date).toLocaleDateString("en-IN")}
-                </p>
-
-                <p>
-                    Our matching system identified this item as
-                    a possible match for your lost item.
+                    Our matching system identified this as a
+                    possible match.
                 </p>
 
                 <p>
                     <a
-                        href="${candidateItem.image}"
-                        target="_blank"
+                        href="${verificationUrl}/yes"
                         style="
                             display:inline-block;
                             padding:12px 20px;
-                            background:#333;
+                            background:#28a745;
+                            color:white;
+                            text-decoration:none;
+                            border-radius:5px;
+                            margin-right:10px;
+                        "
+                    >
+                        YES, THIS IS MY ITEM
+                    </a>
+
+                    <a
+                        href="${verificationUrl}/no"
+                        style="
+                            display:inline-block;
+                            padding:12px 20px;
+                            background:#dc3545;
                             color:white;
                             text-decoration:none;
                             border-radius:5px;
                         "
                     >
-                        🖼️ View Found Item Image
-                    </a>
-                </p>
-
-                <hr>
-
-                <h3>📞 Contact the Finder</h3>
-
-                <p>
-                    You can directly contact the person who reported
-                    this item as found.
-                </p>
-
-                <p>
-                    <strong>Email:</strong>
-                    ${candidateItem.email}
-                </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    ${candidateItem.contact}
-                </p>
-
-                <p>
-                    <a
-                        href="${verificationUrl}"
-                        style="
-                            display:inline-block;
-                            padding:12px 20px;
-                            background:#4CAF50;
-                            color:white;
-                            text-decoration:none;
-                            border-radius:5px;
-                        "
-                    >
-                        🔍 View Match
+                        NO, NOT MY ITEM
                     </a>
                 </p>
 
                 <p>
-                    Please verify the item carefully before
-                    arranging its return.
+                    If you did not submit this item, you can safely
+                    ignore this email.
                 </p>
 
                 <p>
@@ -145,7 +99,16 @@ async function sendMatchVerificationEmail({
         `
     };
 
-    return transporter.sendMail(mailOptions);
+    const { data, error } = await resend.emails.send(mailOptions);
+
+    if (error) {
+        console.error("❌ Resend email error:", error);
+        throw new Error(error.message);
+    }
+
+    console.log("📧 Email sent successfully through Resend:", data);
+
+    return data;
 }
 
 module.exports = {
