@@ -11,6 +11,7 @@ import ContactUs from './Pages/ContactUs';
 import About from './Pages/About';
 import LoginSignup from './Pages/LoginSignup';
 import Footer from './Components/Footer/Footer';
+import MatchVerification from './Pages/MatchVerification';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Route path='/contact-us' element={<ContactUs/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/loginsignup' element={<LoginSignup/>}/>
+      <Route path='/match/:matchId' element={<MatchVerification/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

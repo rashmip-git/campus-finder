@@ -8,6 +8,7 @@ const connectDB = require('./config/db');
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const itemRoutes = require('./routes/itemRoutes');
+const matchRoutes = require('./routes/matchRoutes');
 
 // Middlewares
 const errorHandler = require('./middleware/errorHandler');
@@ -39,6 +40,7 @@ app.use(express.json());
 // -------- ROUTES --------
 app.use('/api/auth', authRoutes);
 app.use('/api/items', itemRoutes);
+app.use('/api/matches', matchRoutes);
 
 app.get("/", (req, res) => {
   res.send("📦 Lost & Found API Running...");

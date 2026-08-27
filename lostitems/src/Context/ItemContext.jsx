@@ -34,6 +34,7 @@ export const ItemContextProvider = ({ children }) => {
   useEffect(() => { fetchItems(); }, []);
 
   const handleadd = async (newItem) => {
+    console.log("🔥 HANDLEADD UPDATED CODE RUNNING");
     if (!token) {
       alert("Please login to add item");
       return false;
@@ -63,10 +64,22 @@ export const ItemContextProvider = ({ children }) => {
       });
 
       const data = await res.json();
-      if (!res.ok) return alert(data.message);
 
-      await fetchItems();
-      return true;
+if (!res.ok) {
+  return alert(data.message);
+}
+
+console.log("=== AUTOMATIC MATCH RESULTS ===");
+console.log(data.matches);
+
+if (data.matches && data.matches.length > 0) {
+  console.log("TOP MATCH:");
+  console.log(data.matches[0]);
+}
+
+await fetchItems();
+
+return true;
 
     } catch (err) {
       console.log(err);
